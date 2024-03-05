@@ -28,7 +28,7 @@ class PixelShuffler(tf.keras.layers.Layer):
         return x
 
 
-generator = keras.models.load_model('generator2.keras')
+generator = keras.models.load_model('models/generator/generator2.keras')
 
 images = []
 
@@ -46,10 +46,11 @@ hr = np.asarray(generator(images))
 
 
 
+
+
 for i in range(len(hr)):
     plt.imshow(images[i])
-    print(images[i][:10])
     plt.show()
     plt.imshow(hr[i])
-    print(hr[i][:10])
+    plt.savefig("output/image" + str(i) + ".png")
     plt.show()

@@ -15,7 +15,7 @@ To use the model:
   3. Run the [use_generator.py](use_generator.py) file.
   4. The upscaled images will be saved in the [/output](output) folder.
 
-# Dependancies
+## Dependancies
 The following Python packages are required to run the model:
   1. Tensorflow
   2. Keras
